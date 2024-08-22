@@ -1,0 +1,56 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.JobHuntApp" parent="Theme.Material3.Light.NoActionBar">
+        <!-- Customize your light theme here. -->
+        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+        <!-- <item name="textInputLayoutFocusedRectEnabled">
+           @style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense
+       </item>-->
+   </style>
+
+   <style name="Theme.JobHuntApp" parent="Base.Theme.JobHuntApp" />
+
+    <style name="TextView" parent="Widget.AppCompat.TextView">
+        <item name="android:textColor">@color/dark_grey</item>
+    </style>
+
+    <style name="ButtonShortStyle" parent="Widget.Material3.Button">
+        <item name="android:backgroundTint">@color/blue_active</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+
+    <style name="ButtonGreenStyle" parent="Widget.Material3.Button">
+        <item name="android:backgroundTint">@color/green</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+
+    <style name="TextInputLayoutStyle" parent="Widget.Material3.TextInputLayout.OutlinedBox.Dense">
+        <!-- Задаем цвет рамки в обычном состоянии -->
+        <item name="boxStrokeColor">@color/blue_active</item>
+        <!-- Задаем цвет рамки при фокусе -->
+        <!--<item name="boxStrokeColorFocused">@color/colorAccent</item>-->
+        <!-- Цвет фона -->
+        <!--<item name="boxBackgroundColor">@color/blue_active</item>-->
+    </style>
+
+    <style name="TransparentImageButton" parent="Widget.AppCompat.ImageButton">
+        <item name="android:background">@color/light_grey</item>
+    </style>
+
+    <style name="FavoriteCheckBoxStyle" parent="Theme.AppCompat.DayNight">
+        <!-- Применяем фоновое изображение к самому флажку -->
+        <item name="android:button">@drawable/selector_favorite_item</item>
+    </style>
+
+    <style name="ExperienceImageViewStyle" parent="Theme.Material3.Light.NoActionBar">
+        <!-- Применяем фоновое изображение к самому флажку -->
+        <item name="android:tint">@color/black</item>
+    </style>
+
+</resources>

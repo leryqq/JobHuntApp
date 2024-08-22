@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="light_grey">#DFDFDF</color>
+    <color name="light_grey_text">#989898</color>
+    <color name="light_grey_textInputLayout">#F6F6F6</color>
+    <color name="dark_grey">#222323</color>
+    <color name="dark_grey_textInputLayout">#343535</color>
+    <color name="red">#F44336</color>
+    <color name="blue_active">#2B7EFE</color>
+    <color name="blue_clicked">#00427D</color>
+    <color name="green">#4CB24E</color>
+    <color name="cardView_green">#7C6EFF70</color>
+</resources>

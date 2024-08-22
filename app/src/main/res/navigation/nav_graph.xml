@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/authFragment">
+
+    <fragment
+        android:id="@+id/authFragment"
+        android:name="com.example.jobhuntapp.fragments.AuthFragment"
+        android:label="fragment_auth"
+        tools:layout="@layout/fragment_auth" >
+        <action
+            android:id="@+id/action_authFragment_to_authCodeFragment"
+            app:destination="@id/authCodeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/authCodeFragment"
+        android:name="com.example.jobhuntapp.fragments.AuthCodeFragment"
+        android:label="fragment_auth_code"
+        tools:layout="@layout/fragment_auth_code" >
+        <action
+            android:id="@+id/action_authCodeFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.jobhuntapp.fragments.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_vacancyFragment"
+            app:destination="@id/vacancyFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/favoriteFragment"
+        android:name="com.example.jobhuntapp.fragments.FavoriteFragment"
+        android:label="fragment_favorite"
+        tools:layout="@layout/fragment_favorite" />
+    <fragment
+        android:id="@+id/vacancyFragment"
+        android:name="com.example.jobhuntapp.fragments.VacancyFragment"
+        android:label="fragment_vacancy"
+        tools:layout="@layout/fragment_vacancy" >
+        <action
+            android:id="@+id/action_vacancyFragment_to_bottomSheetApplyVacancyFragment"
+            app:destination="@id/bottomSheetApplyVacancyFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/bottomSheetApplyVacancyFragment"
+        android:name="com.example.jobhuntapp.fragments.bottomsheet.BottomSheetApplyVacancyFragment"
+        android:label="fragment_bottom_sheet_apply_vacancy"
+        tools:layout="@layout/fragment_bottom_sheet_apply_vacancy" />
+</navigation>

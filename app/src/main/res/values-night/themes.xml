@@ -1,0 +1,42 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.JobHuntApp" parent="Theme.Material3.DayNight.NoActionBar"> <!--Theme.Material3.DayNight.NoActionBar-->
+        <!-- Customize your dark theme here. -->
+        <!-- <item name="colorPrimary">@color/my_dark_primary</item> -->
+        <item name="android:textViewStyle">@style/TextView</item>
+        <item name="cardViewStyle">@style/DarkCardViewStyle</item>
+        <item name="textInputStyle">@style/TextInputLayoutStyle</item>
+    </style>
+
+    <style name="TextView" parent="">
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="DarkCardViewStyle" parent="Widget.Material3.CardView.Filled">
+        <!-- Задаем цвет фона для CardView -->
+        <item name="cardBackgroundColor">@color/dark_grey</item>
+    </style>
+
+    <style name="TextInputLayoutStyle" parent="Widget.Material3.TextInputLayout.OutlinedBox.Dense">
+        <!-- Задаем цвет рамки в обычном состоянии -->
+        <item name="boxStrokeColor">@color/blue_active</item>
+        <!-- Задаем цвет рамки при фокусе -->
+        <!--<item name="boxStrokeColorFocused">@color/colorAccent</item>-->
+        <!-- Цвет фона -->
+        <item name="boxBackgroundColor">@color/dark_grey_textInputLayout</item>
+    </style>
+
+    <style name="TransparentImageButton" parent="Widget.AppCompat.ImageButton">
+        <item name="android:background">@color/dark_grey_textInputLayout</item>
+    </style>
+
+    <style name="FavoriteCheckBoxStyle" parent="Theme.AppCompat.DayNight">
+        <!-- Применяем фоновое изображение к самому флажку -->
+        <item name="android:button">@drawable/selector_favorite_item</item>
+    </style>
+
+    <style name="ExperienceImageViewStyle" parent="Theme.Material3.Light.NoActionBar">
+        <!-- Применяем фоновое изображение к самому флажку -->
+        <item name="android:tint">@color/white</item>
+    </style>
+</resources>
