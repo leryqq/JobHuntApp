@@ -45,7 +45,9 @@
             android:layout_height="match_parent"
             android:gravity="center"
             android:hint="*"
+            android:imeOptions="actionNext"
             android:inputType="number"
+            android:maxLength="1"
             android:textAlignment="center" />
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -65,7 +67,9 @@
             android:layout_height="match_parent"
             android:gravity="center"
             android:hint="*"
+            android:imeOptions="actionNext"
             android:inputType="number"
+            android:maxLength="1"
             android:textAlignment="center" />
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -85,7 +89,9 @@
             android:layout_height="match_parent"
             android:gravity="center"
             android:hint="*"
+            android:imeOptions="actionNext"
             android:inputType="number"
+            android:maxLength="1"
             android:textAlignment="center" />
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -105,7 +111,9 @@
             android:layout_height="match_parent"
             android:gravity="center"
             android:hint="*"
+            android:imeOptions="actionDone"
             android:inputType="number"
+            android:maxLength="1"
             android:textAlignment="center" />
     </com.google.android.material.textfield.TextInputLayout>
 

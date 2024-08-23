@@ -9,7 +9,7 @@
     <color name="dark_grey_textInputLayout">#343535</color>
     <color name="red">#F44336</color>
     <color name="blue_active">#2B7EFE</color>
-    <color name="blue_clicked">#00427D</color>
+    <color name="blue_disabled">#00427D</color>
     <color name="green">#4CB24E</color>
     <color name="cardView_green">#7C6EFF70</color>
 </resources>

@@ -2,10 +2,8 @@
     <!-- Base application theme. -->
     <style name="Base.Theme.JobHuntApp" parent="Theme.Material3.Light.NoActionBar">
         <!-- Customize your light theme here. -->
-        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
-        <!-- <item name="textInputLayoutFocusedRectEnabled">
-           @style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense
-       </item>-->
+        <item name="colorPrimary">@color/white</item>
+
    </style>
 
    <style name="Theme.JobHuntApp" parent="Base.Theme.JobHuntApp" />
@@ -20,6 +18,7 @@
         <item name="android:textSize">16sp</item>
         <item name="android:textAlignment">center</item>
         <item name="android:textAllCaps">false</item>
+        <item name="cornerRadius">8dp</item>
     </style>
 
     <style name="ButtonGreenStyle" parent="Widget.Material3.Button">
@@ -53,4 +52,9 @@
         <item name="android:tint">@color/black</item>
     </style>
 
+    <style name="ActiveIndicatorStyle" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="itemTextColor">@drawable/bottom_navigation_icon_selected</item>
+        <item name="itemIconTint">@color/blue_active</item>
+
+    </style>
 </resources>
