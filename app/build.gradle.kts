@@ -61,4 +61,6 @@ dependencies {
     implementation ("androidx.lifecycle:lifecycle-viewmodel-ktx:2.8.4")
     //livedata
     implementation ("androidx.lifecycle:lifecycle-livedata-ktx:2.8.4")
+    //adapterdelegates
+    implementation ("com.hannesdorfmann:adapterdelegates4:4.3.0")
 }

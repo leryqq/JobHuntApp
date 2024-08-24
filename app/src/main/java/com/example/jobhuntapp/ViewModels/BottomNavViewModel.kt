@@ -15,5 +15,5 @@ class BottomNavViewModel: ViewModel() {
 }
 
 enum class Tab {
-    SEARCH, FAVORITE, RESPONSES, MESSAGES, PROFILE
+    AUTH, SEARCH, FAVORITE, RESPONSES, MESSAGES, PROFILE
 }

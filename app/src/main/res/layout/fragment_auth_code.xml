@@ -36,6 +36,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
+        app:hintAnimationEnabled="false"
+        app:hintEnabled="false"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/textView_sendCodeToArticle">
 
@@ -58,6 +60,8 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginTop="16dp"
+        app:hintAnimationEnabled="false"
+        app:hintEnabled="false"
         app:layout_constraintStart_toEndOf="@id/textInputLayout_codeSymbol1"
         app:layout_constraintTop_toBottomOf="@id/textView_sendCodeToArticle">
 
@@ -80,6 +84,8 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginTop="16dp"
+        app:hintAnimationEnabled="false"
+        app:hintEnabled="false"
         app:layout_constraintStart_toEndOf="@id/textInputLayout_codeSymbol2"
         app:layout_constraintTop_toBottomOf="@id/textView_sendCodeToArticle">
 
@@ -102,6 +108,8 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginTop="16dp"
+        app:hintAnimationEnabled="false"
+        app:hintEnabled="false"
         app:layout_constraintStart_toEndOf="@id/textInputLayout_codeSymbol3"
         app:layout_constraintTop_toBottomOf="@id/textView_sendCodeToArticle">
 
@@ -124,6 +132,8 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:text="@string/confirm"
+        android:enabled="false"
+        android:backgroundTint="@color/blue_disabled"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textInputLayout_codeSymbol1" />

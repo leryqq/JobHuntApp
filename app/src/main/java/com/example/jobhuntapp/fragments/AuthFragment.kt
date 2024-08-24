@@ -49,6 +49,14 @@ class AuthFragment : Fragment() {
 
             override fun afterTextChanged(s: Editable?) {}
         })
+
+        binding.editTextEmail.setOnFocusChangeListener{ v, hasFocus ->
+            if (hasFocus) {
+                binding.editTextEmail.setCompoundDrawablesWithIntrinsicBounds(null, null, null, null)
+            } else {
+                binding.editTextEmail.setCompoundDrawablesWithIntrinsicBounds(R.drawable.ic_mail_16, 0,0,0)
+            }
+        }
     }
 
     private fun observeViewModel() {
@@ -87,7 +95,10 @@ class AuthFragment : Fragment() {
 
         viewModel.navigateToAuthCode.observe(viewLifecycleOwner) {shouldNavigate ->
             if (shouldNavigate == true) {
-                findNavController().navigate(R.id.action_authFragment_to_authCodeFragment)
+                val bundle = Bundle()
+                val email = binding.editTextEmail.editableText.toString()
+                bundle.putString("email", email)
+                findNavController().navigate(R.id.action_authFragment_to_authCodeFragment, bundle)
                 viewModel.navigationComplete()
             }
         }
