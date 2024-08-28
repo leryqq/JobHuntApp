@@ -1,0 +1,39 @@
+package com.example.jobhuntapp.adapters.home.vacanciesdelegates
+
+import android.view.LayoutInflater
+import android.view.View
+import android.view.ViewGroup
+import android.widget.CheckBox
+import androidx.recyclerview.widget.RecyclerView
+import com.example.jobhuntapp.R
+import com.example.jobhuntapp.dataclasses.Vacancies
+import com.hannesdorfmann.adapterdelegates4.AdapterDelegate
+
+class CheckBoxFavoriteDelegate : AdapterDelegate<List<Any>>() {
+    override fun isForViewType(items: List<Any>, position: Int): Boolean {
+        return items[position] is Vacancies
+    }
+
+    override fun onCreateViewHolder(parent: ViewGroup): RecyclerView.ViewHolder {
+        val view = LayoutInflater.from(parent.context).inflate(R.layout.rv_vacancy_item, parent, false)
+        return CheckBoxFavoriteViewHolder(view)
+    }
+
+    override fun onBindViewHolder(
+        items: List<Any>,
+        position: Int,
+        holder: RecyclerView.ViewHolder,
+        payloads: MutableList<Any>
+    ) {
+        val item = items[position] as Vacancies
+        (holder as CheckBoxFavoriteViewHolder).bind(item)
+    }
+
+    inner class CheckBoxFavoriteViewHolder(view: View) : RecyclerView.ViewHolder(view) {
+        private val checkBox: CheckBox = view.findViewById(R.id.checkBox_favorite)
+
+        fun bind(item: Vacancies) {
+            checkBox.isChecked = item.isFavorite
+        }
+    }
+}

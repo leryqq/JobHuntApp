@@ -10,8 +10,8 @@ import android.widget.Toast
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
-import androidx.lifecycle.Observer
 import androidx.navigation.fragment.findNavController
+import com.example.jobhuntapp.MainActivity
 import com.example.jobhuntapp.R
 import com.example.jobhuntapp.ViewModels.AuthViewModel
 import com.example.jobhuntapp.databinding.FragmentAuthBinding
@@ -21,17 +21,13 @@ class AuthFragment : Fragment() {
 
     private lateinit var binding: FragmentAuthBinding
     private val viewModel: AuthViewModel by viewModels()
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-
-    }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
         binding = FragmentAuthBinding.inflate(inflater, container, false)
-
+        (activity as? MainActivity)?.setToolbarVisibility(false)
         setupEditText()
         observeViewModel()
         continueButtonEnable()
@@ -44,13 +40,13 @@ class AuthFragment : Fragment() {
         binding.editTextEmail.addTextChangedListener(object : TextWatcher {
             override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {}
             override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
-                viewModel.onTextChanged(s.toString()) // Передаем текст в ViewModel
+                viewModel.onTextChanged(s.toString())
             }
 
             override fun afterTextChanged(s: Editable?) {}
         })
 
-        binding.editTextEmail.setOnFocusChangeListener{ v, hasFocus ->
+        binding.editTextEmail.setOnFocusChangeListener{ _, hasFocus ->
             if (hasFocus) {
                 binding.editTextEmail.setCompoundDrawablesWithIntrinsicBounds(null, null, null, null)
             } else {
@@ -60,13 +56,13 @@ class AuthFragment : Fragment() {
     }
 
     private fun observeViewModel() {
-        viewModel.isInputValid.observe(viewLifecycleOwner, Observer { isValid ->
+        viewModel.isInputValid.observe(viewLifecycleOwner) { isValid ->
             if (isValid == false) {
                 binding.textInputLayoutEmail.helperText = getString(R.string.wrong_email)
             } else {
                 binding.textInputLayoutEmail.helperText = null
             }
-        })
+        }
     }
 
     private fun continueButtonEnable() {
@@ -103,16 +99,10 @@ class AuthFragment : Fragment() {
             }
         }
 
-        viewModel.showToastEvent.observe(requireActivity(), Observer {message ->
+        viewModel.showToastEvent.observe(viewLifecycleOwner) {message ->
             message?.let {
                 Toast.makeText(requireActivity(), it, Toast.LENGTH_SHORT).show()
             }
-        })
-    }
-
-    companion object {
-
-        @JvmStatic
-        fun newInstance() = AuthFragment()
+        }
     }
 }

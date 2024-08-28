@@ -1,29 +1,38 @@
 package com.example.jobhuntapp.fragments.bottomsheet
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.example.jobhuntapp.R
+import android.widget.Toast
+import com.example.jobhuntapp.databinding.FragmentBottomSheetApplyVacancyBinding
+import com.google.android.material.bottomsheet.BottomSheetDialogFragment
 
-class BottomSheetApplyVacancyFragment : Fragment() {
+class BottomSheetApplyVacancyFragment : BottomSheetDialogFragment() {
+    private lateinit var binding: FragmentBottomSheetApplyVacancyBinding
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-
-    }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_bottom_sheet_apply_vacancy, container, false)
+    ): View {
+        binding = FragmentBottomSheetApplyVacancyBinding.inflate(layoutInflater, container, false)
+
+        binding.buttonAddCoverLetter.setOnClickListener {
+            binding.buttonAddCoverLetter.visibility = View.GONE
+            binding.editTextCoverLetter.visibility = View.VISIBLE
+        }
+
+        binding.buttonApply.setOnClickListener {
+            dismiss()
+        }
+
+        return binding.root
     }
 
     companion object {
         @JvmStatic
         fun newInstance() = BottomSheetApplyVacancyFragment()
+        const val APPLY_TAG = "BottomSheetFragment"
     }
 }

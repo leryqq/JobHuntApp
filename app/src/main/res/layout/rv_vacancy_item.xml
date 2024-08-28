@@ -25,8 +25,8 @@
         <CheckBox
             android:id="@+id/checkBox_favorite"
             style="@style/FavoriteCheckBoxStyle"
-            android:layout_width="28dp"
-            android:layout_height="28dp"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
             android:gravity="top"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -112,7 +112,7 @@
             android:id="@+id/textView_publishedDate"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Опубликовано 16 февраля"
+            android:text="@string/published"
             android:textSize="14sp"
             android:textStyle="normal"
             android:layout_marginTop="4dp"

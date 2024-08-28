@@ -31,12 +31,19 @@
         <action
             android:id="@+id/action_homeFragment_to_vacancyFragment"
             app:destination="@id/vacancyFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_complianceVacanciesFragment"
+            app:destination="@id/complianceVacanciesFragment" />
     </fragment>
     <fragment
         android:id="@+id/favoriteFragment"
         android:name="com.example.jobhuntapp.fragments.FavoriteFragment"
         android:label="fragment_favorite"
-        tools:layout="@layout/fragment_favorite" />
+        tools:layout="@layout/fragment_favorite" >
+        <action
+            android:id="@+id/action_favoriteFragment_to_vacancyFragment"
+            app:destination="@id/vacancyFragment" />
+    </fragment>
     <fragment
         android:id="@+id/vacancyFragment"
         android:name="com.example.jobhuntapp.fragments.VacancyFragment"
@@ -51,4 +58,13 @@
         android:name="com.example.jobhuntapp.fragments.bottomsheet.BottomSheetApplyVacancyFragment"
         android:label="fragment_bottom_sheet_apply_vacancy"
         tools:layout="@layout/fragment_bottom_sheet_apply_vacancy" />
+    <fragment
+        android:id="@+id/complianceVacanciesFragment"
+        android:name="com.example.jobhuntapp.fragments.ComplianceVacanciesFragment"
+        android:label="fragment_compliance_vacancies"
+        tools:layout="@layout/fragment_compliance_vacancies" >
+        <action
+            android:id="@+id/action_complianceVacanciesFragment_to_vacancyFragment"
+            app:destination="@id/vacancyFragment" />
+    </fragment>
 </navigation>

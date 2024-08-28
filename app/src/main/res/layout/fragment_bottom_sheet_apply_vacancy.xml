@@ -19,16 +19,17 @@
             android:background="@drawable/drag_handle"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"/>
+            app:layout_constraintTop_toTopOf="parent" />
 
-        <ImageView
+        <com.google.android.material.imageview.ShapeableImageView
             android:id="@+id/imageView_userAvatar"
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:layout_marginTop="16dp"
-            android:src="@drawable/googleg_standard_color_18"
+            android:src="@drawable/avatar"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/view_dragHandle" />
+            app:layout_constraintTop_toBottomOf="@id/view_dragHandle"
+            app:shapeAppearanceOverlay="@style/AvatarStyle" />
 
         <TextView
             android:id="@+id/textView_resumeToApply"
@@ -38,7 +39,7 @@
             android:layout_marginTop="16dp"
             android:text="@string/resume_to_apply"
             app:layout_constraintStart_toEndOf="@id/imageView_userAvatar"
-            app:layout_constraintTop_toBottomOf="@id/view_dragHandle"/>
+            app:layout_constraintTop_toBottomOf="@id/view_dragHandle" />
 
         <TextView
             android:layout_width="0dp"
@@ -68,7 +69,10 @@
             android:layout_marginTop="16dp"
             android:backgroundTint="@android:color/transparent"
             android:hint="@string/your_cover_letter"
-            android:inputType="text"
+            android:inputType="textMultiLine"
+            android:maxLines="10"
+            android:overScrollMode="always"
+            android:scrollbars="vertical"
             android:singleLine="false"
             android:textSize="14sp"
             android:visibility="gone"
@@ -85,17 +89,17 @@
             android:text="@string/add_cover_letter"
             android:textAlignment="center"
             android:textColor="@color/green"
+            android:visibility="visible"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/editText_coverLetter"
-            android:visibility="visible"/>
+            app:layout_constraintTop_toBottomOf="@id/editText_coverLetter" />
 
         <Button
             android:id="@+id/button_apply"
             style="@style/ButtonShortStyle"
-            android:backgroundTint="@color/green"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:backgroundTint="@color/green"
             android:text="@string/apply"
             android:textAlignment="center"
             app:layout_constraintEnd_toEndOf="parent"

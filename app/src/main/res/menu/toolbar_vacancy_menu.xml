@@ -15,10 +15,10 @@
         android:icon="@drawable/ic_share"
         app:showAsAction="ifRoom" />
 
-    <item
+    <!--<item
         android:id="@+id/addToFavorite"
         android:title="@string/favorite"
         android:enabled="true"
         android:icon="@drawable/ic_favorite_outline_24"
-        app:showAsAction="ifRoom"/>
+        app:showAsAction="ifRoom"/>-->
 </menu>

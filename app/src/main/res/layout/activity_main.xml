@@ -6,16 +6,24 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <Toolbar
+    <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
         android:elevation="4dp"
+        android:visibility="visible"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" >
+        app:layout_constraintTop_toTopOf="parent">
 
-    </Toolbar>
+        <CheckBox
+            android:id="@+id/checkBox_favorite"
+            style="@style/FavoriteCheckBoxStyle"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_gravity="end"
+            android:layout_marginEnd="8dp"/>
+    </androidx.appcompat.widget.Toolbar>
 
     <androidx.fragment.app.FragmentContainerView
         android:id="@+id/nav_host_fragment_container"
@@ -26,21 +34,22 @@
         app:layout_constraintBottom_toTopOf="@+id/bottomNavigationView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/toolbar"
+        app:layout_constraintTop_toBottomOf="@id/toolbar"
         app:navGraph="@navigation/nav_graph" />
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottomNavigationView"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
+        app:itemActiveIndicatorStyle="@style/ActiveIndicatorStyle"
+        app:itemIconTint="@drawable/bottom_navigation_icon_selected"
+        app:itemRippleColor="@android:color/transparent"
+        app:itemTextColor="@drawable/bottom_navigation_icon_selected"
+        app:labelVisibilityMode="labeled"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:menu="@menu/bottom_navigation_menu"
-        app:labelVisibilityMode="labeled"
-        app:itemRippleColor="@android:color/transparent"
-        app:itemIconTint="@drawable/bottom_navigation_icon_selected"
-        app:itemTextColor="@drawable/bottom_navigation_icon_selected"
-        app:itemActiveIndicatorStyle="@style/ActiveIndicatorStyle" />
+        app:layout_constraintTop_toBottomOf="@id/nav_host_fragment_container"
+        app:menu="@menu/bottom_navigation_menu" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

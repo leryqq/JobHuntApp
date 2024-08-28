@@ -26,7 +26,9 @@
     <string name="favorite">Избранные</string>
     <string name="required_experience">Требуемый опыт:</string>
     <string name="people_applied">человек уже откликнулось</string>
-    <string name="looking_now">человека сейчас смотрят</string>
+    <string name="looking_now1">человек сейчас смотрит</string>
+    <string name="looking_now2">человека сейчас смотрят</string>
+    <string name="looking_now3">человек сейчас смотрят</string>
     <string name="your_tasks">Ваши задачи</string>
     <string name="ask_question">Задайте вопрос работодателю</string>
     <string name="receiveQuestion">Он получит его с откликом на вакансию</string>
@@ -35,4 +37,19 @@
     <string name="add_cover_letter">Добавить сопроводительное</string>
     <string name="your_cover_letter">Ваше сопроводительное письмо</string>
     <string name="vacancy">вакансия</string>
+    <string name="position_compliance_vacancies">Должность по подходящим вакансиям</string>
+    <string name="compliance_vacancies">вакансий</string>
+    <string name="map">Карта</string>
+    <string name="by_matches">По соответствию</string>
+    <string name="by_date">По дате</string>
+    <string name="by_desc_salary">По убыванию уровня дохода</string>
+    <string name="by_asc_salary">По возрастанию уровня дохода</string>
+    <string name="published">Опубликовано</string>
+
+    <string-array name="extraFilters">
+        <item>@string/by_date</item>
+        <item>@string/by_desc_salary</item>
+        <item>@string/by_asc_salary</item>
+        <item>@string/by_matches</item>
+    </string-array>
 </resources>

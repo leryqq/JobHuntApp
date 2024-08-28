@@ -1,13 +1,9 @@
 package com.example.jobhuntapp.ViewModels
 
-import android.text.Editable
-import android.text.TextWatcher
-import android.widget.EditText
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MediatorLiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import com.google.android.material.textfield.TextInputEditText
 
 class AuthCodeViewModel : ViewModel() {
     private val _email = MutableLiveData<String>()
@@ -74,8 +70,6 @@ class AuthCodeViewModel : ViewModel() {
     val showToastEvent: LiveData<String> get() = _showToastEvent
 
     fun onConfirmButtonClicked() {
-        // Устанавливаем значение LiveData для отображения Toast
-        //_showToastEvent.value = "Button clicked!"
         _navigateToHome.value = true
     }
 

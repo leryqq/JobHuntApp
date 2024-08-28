@@ -6,6 +6,7 @@
         <item name="android:textViewStyle">@style/TextView</item>
         <item name="cardViewStyle">@style/DarkCardViewStyle</item>
         <item name="textInputStyle">@style/TextInputLayoutStyle</item>
+        <item name="searchViewStyle">@style/SearchViewStyle</item>
     </style>
 
     <style name="TextView" parent="">
@@ -13,30 +14,57 @@
     </style>
 
     <style name="DarkCardViewStyle" parent="Widget.Material3.CardView.Filled">
-        <!-- Задаем цвет фона для CardView -->
         <item name="cardBackgroundColor">@color/dark_grey</item>
     </style>
 
     <style name="TextInputLayoutStyle" parent="Widget.Material3.TextInputLayout.OutlinedBox.Dense">
-        <!-- Задаем цвет рамки в обычном состоянии -->
         <item name="boxStrokeColor">@color/blue_active</item>
-        <!-- Задаем цвет рамки при фокусе -->
-        <!--<item name="boxStrokeColorFocused">@color/colorAccent</item>-->
-        <!-- Цвет фона -->
         <item name="boxBackgroundColor">@color/dark_grey_textInputLayout</item>
+        <item name="cursorColor">@color/white</item>
+    </style>
+
+    <style name="SearchViewStyle" parent="Widget.Material3.SearchView">
+        <item name="android:background">@drawable/bg_rounded_corners_dark</item>
+        <item name="cursorColor">@color/white</item>
     </style>
 
     <style name="TransparentImageButton" parent="Widget.AppCompat.ImageButton">
         <item name="android:background">@color/dark_grey_textInputLayout</item>
     </style>
 
-    <style name="FavoriteCheckBoxStyle" parent="Theme.AppCompat.DayNight">
-        <!-- Применяем фоновое изображение к самому флажку -->
-        <item name="android:button">@drawable/selector_favorite_item</item>
+    <style name="FavoriteCheckBoxStyle" parent="Widget.AppCompat.CompoundButton.CheckBox">
+        <item name="android:button">@android:color/transparent</item>
+        <item name="android:background">@drawable/selector_favorite_item</item>
     </style>
 
     <style name="ExperienceImageViewStyle" parent="Theme.Material3.Light.NoActionBar">
-        <!-- Применяем фоновое изображение к самому флажку -->
         <item name="android:tint">@color/white</item>
+    </style>
+
+    <style name="IconTintStyle" parent="Widget.Material3.Chip.Input.Icon">
+        <item name="android:drawableTint">@color/white</item>
+    </style>
+
+    <style name="FABStyle" parent="Widget.MaterialComponents.ExtendedFloatingActionButton">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">0dp</item>
+        <item name="backgroundTint">@color/dark_grey_textInputLayout</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="textAllCaps">false</item>
+        <item name="iconTint">@color/white</item>
+    </style>
+
+    <style name="SpinnerStyle" parent="Widget.AppCompat.Spinner.DropDown">
+        <item name="android:drawable">@drawable/ic_sort_arrows</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="SearchViewLayoutStyle" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="android:background">@drawable/bg_rounded_corners_dark</item>
+    </style>
+
+    <style name="AvatarStyle" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">50%</item>
     </style>
 </resources>

@@ -57,6 +57,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
+                app:hintAnimationEnabled="false"
+                app:hintEnabled="false"
                 app:endIconDrawable="@drawable/ic_close"
                 app:endIconMode="clear_text"
                 app:helperTextEnabled="true"
@@ -72,7 +74,7 @@
                     android:drawableStart="@drawable/ic_mail_16"
                     android:drawablePadding="8dp"
                     android:hint="@string/email"
-                    android:inputType="textEmailAddress" />
+                    android:inputType="textEmailAddress"/>
             </com.google.android.material.textfield.TextInputLayout>
 
             <LinearLayout

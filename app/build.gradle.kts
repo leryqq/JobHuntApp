@@ -1,3 +1,5 @@
+import org.jetbrains.kotlin.resolve.sam.SamConstructorDescriptorKindExclude.excludes
+
 plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
@@ -36,6 +38,14 @@ android {
     buildFeatures {
         viewBinding = true
     }
+    packaging {
+        resources {
+            excludes += listOf(
+                "META-INF/LICENSE-notice.md",
+                "META-INF/LICENSE.md"
+            )
+        }
+    }
 }
 
 dependencies {
@@ -46,6 +56,8 @@ dependencies {
     implementation("androidx.constraintlayout:constraintlayout:2.1.4")
     implementation("com.google.android.gms:play-services-maps:19.0.0")
     implementation("androidx.databinding:databinding-runtime:8.5.2")
+    implementation("org.junit.jupiter:junit-jupiter:5.10.1")
+    implementation("androidx.test.ext:junit-ktx:1.2.1")
     testImplementation("junit:junit:4.13.2")
     androidTestImplementation("androidx.test.ext:junit:1.2.1")
     androidTestImplementation("androidx.test.espresso:espresso-core:3.6.1")
@@ -62,5 +74,17 @@ dependencies {
     //livedata
     implementation ("androidx.lifecycle:lifecycle-livedata-ktx:2.8.4")
     //adapterdelegates
-    implementation ("com.hannesdorfmann:adapterdelegates4:4.3.0")
+    implementation ("com.hannesdorfmann:adapterdelegates4-kotlin-dsl:4.3.2")
+    //retrofit
+    implementation("com.squareup.retrofit2:retrofit:2.9.0")
+    implementation("com.squareup.retrofit2:converter-gson:2.9.0")
+    //mockwebserver
+    testImplementation("com.squareup.okhttp3:mockwebserver:4.10.0")
+    //junit
+    testImplementation ("org.junit.jupiter:junit-jupiter-api:5.10.1")
+    testRuntimeOnly ("org.junit.jupiter:junit-jupiter-engine:5.10.1")
+    //espresso
+    testImplementation ("androidx.test.espresso:espresso-core:3.6.1")
+    //dagger2
+    implementation ("com.google.dagger:dagger:2.28.3")
 }

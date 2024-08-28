@@ -6,7 +6,7 @@ import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
 
 class BottomNavViewModel: ViewModel() {
-    private val _selectedTab = MutableStateFlow(Tab.SEARCH)
+    private val _selectedTab = MutableStateFlow(Tab.AUTH)
     val selectedTab: StateFlow<Tab> = _selectedTab.asStateFlow()
 
     fun selectTab(tab: Tab) {
